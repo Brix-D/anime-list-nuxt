@@ -7,7 +7,8 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'eslint:recommended',
     '@vue/eslint-config-typescript/recommended',
-    '@vue/eslint-config-prettier',
+    '@vue/eslint-config-prettier'
+    // '@nuxtjs/eslint-config-typescript'
   ],
   rules: {
     'prettier/prettier': [
@@ -15,7 +16,16 @@ module.exports = {
       {
         singleQuote: true,
         trailingComma: 'all',
-      },
+      }
     ],
+    '@typescript-eslint/no-unused-vars': ['off'],
   },
-};
+  overrides: [
+    {
+      files: ['pages/**/*.vue', 'layouts/*.vue'],
+      rules: {
+        'vue/multi-word-component-names': 'off',
+      }
+    },
+  ]
+}
