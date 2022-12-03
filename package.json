@@ -3,6 +3,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "start": "cross-env NITRO_HOST=localhost node .output/server/index.mjs",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -13,6 +14,7 @@
     "@vue/eslint-config-prettier": "^7.0.0",
     "@vue/eslint-config-typescript": "^11.0.0",
     "autoprefixer": "^10.4.13",
+    "cross-env": "^7.0.3",
     "eslint": "^8.5.0",
     "eslint-plugin-vue": "^9.0.0",
     "nuxt": "3.0.0",

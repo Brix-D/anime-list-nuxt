@@ -1,8 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   runtimeConfig: {
+    apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL,
     public: {
-      apiBaseUrl: '',
+      apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL,
     },
   },
   postcss: {
